@@ -3,7 +3,7 @@ import csv
 ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
 dictionary = {}
-csvFile = open("result.csv", 'r')
+csvFile = open("edchat.csv", 'r')
 csvreader = csv.reader(csvFile)
 count = 0
 boolean = False
@@ -26,14 +26,15 @@ for row in csvreader:
 
 
 
-dictionary['#education'] = count
-
-#del dictionary['#']
+dictionary['#edchat'] = count
+print(count)
+del dictionary['#']
 #del dictionary['b']
+del dictionary['rt']
 
 sorted_x = sorted(dictionary.items(), key=lambda kv: kv[1])
 
-with open('final_data.csv', 'w') as csvFile:
+with open('final_data_edchat.csv', 'w') as csvFile:
     writer = csv.writer(csvFile)
     writer.writerows(sorted_x[-10:])
 csvFile.close()

@@ -3,7 +3,7 @@ import csv
 import numpy as np
 import matplotlib.pyplot as plt
 
-csvFile = open("final_data.csv", 'r')
+csvFile = open("final_data_edtech.csv", 'r')
 csvreader = csv.reader(csvFile)
 
 Numbers = []
